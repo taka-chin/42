@@ -33,4 +33,7 @@ DockerデーモンはDocker APIリクエストを受けつけ、イメージ、�
 * これは、プロジェクトのDockerイメージを自分で構築する必要があることを意味します。
 * 次に、既製のDockerイメージを引き出し、DockerHub（Alpine/Debianはこのルールから除外されます）などのサービスを使用することが禁止されています。
 
-
+## nginx
+Your NGINX container must be the only entrypoint into your
+infrastructure via the port 443 only, using the TLSv1.2 or TLSv1.3
+protocol.
