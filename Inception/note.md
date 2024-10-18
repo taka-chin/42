@@ -14,7 +14,10 @@
 # Dockerファイル
 Dockerfileはテキストファイルであり、イメージを作り上げるのために実行するコマンドライン命令を書く
 ## Docker builed
-Docker builedコマンドはDockerfileとコンテキストからイメージをbuildします
+Docker buildコマンドはDockerfileとコンテキストからイメージをbuildします
+```
+$ docker build [オプション] パス | URL | -
+```
 
 # Composeファイル
 ComposeファイルとはDockerアプリケーション用のサービス、ネットワーク、ボリュームを定義したYAMLファイルです
