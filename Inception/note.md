@@ -13,10 +13,16 @@
 
 # Dockerファイル
 Dockerfileはテキストファイルであり、イメージを作り上げるのために実行するコマンドライン命令を書く
-## Docker builed
+## docker build
 Docker buildコマンドはDockerfileとコンテキストからイメージをbuildします
 ```
 $ docker build [オプション] パス | URL | -
+```
+
+## docker run
+コンテナを起動するには、 docker run コマンドを使い、先ほど作成したイメージ名を指定します
+```
+$ docker run [オプション] イメージ[:タグ|@ダイジェスト値] [コマンド] [引数...]
 ```
 
 # Composeファイル
