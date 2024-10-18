@@ -46,3 +46,11 @@ DockerデーモンはDocker APIリクエストを受けつけ、イメージ、�
 Your NGINX container must be the only entrypoint into your
 infrastructure via the port 443 only, using the TLSv1.2 or TLSv1.3
 protocol.
+
+##tips
+コンテナIDを取得したい時
+```
+docker ps -lq
+```
+
+
