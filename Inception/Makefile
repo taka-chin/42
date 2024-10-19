@@ -8,3 +8,7 @@ up:
 
 .PHONY: build-up
 build-up: build up
+
+.PHONY: down 
+down:
+	docker compose -f ./srcs/docker-compose.yml down
