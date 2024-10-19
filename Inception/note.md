@@ -23,6 +23,8 @@ $ docker build [オプション] パス | URL | -
 コンテナを起動するには、 docker run コマンドを使い、先ほど作成したイメージ名を指定します
 ```
 $ docker run [オプション] イメージ[:タグ|@ダイジェスト値] [コマンド] [引数...]
+
+$ docker run -d -p 80:80 my_image service nginx start
 ```
 
 # Composeファイル
