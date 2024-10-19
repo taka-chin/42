@@ -55,9 +55,21 @@ protocol.
 * A Docker container that contains WordPress + php-fpm (it must be installed and configured) only without nginx.
 * A volume that contains your WordPress database.
 * A second volume that contains your WordPress website files.
+* In your WordPress database, there must be two users, one of them being the ad- ministrator. The administrator’s username can’t contain admin/Admin or admin- istrator/Administrator (e.g., admin, administrator, Administrator, admin-123, and so forth).
 
 ## mariaDB
 * A Docker container that contains MariaDB only without nginx.
+
+## env
+The latest tag is prohibited.
+No password must be present in your Dockerfiles.
+It is mandatory to use environment variables.
+Also, it is strongly recommended to use a .env file to store
+environment variables.  The .env file should be located at the root
+of the srcs directory.
+Your NGINX container must be the only entrypoint into your
+infrastructure via the port 443 only, using the TLSv1.2 or TLSv1.3
+protocol.
 
 ## tips
 コンテナIDを取得したい時
