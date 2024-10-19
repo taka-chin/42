@@ -1,5 +1,7 @@
-FROM nginx:latest
+FROM	debian:bullseye 
+RUN apt-get update \
+		&& apt-get install -y \
+				vim \
+				nginx 
 
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
