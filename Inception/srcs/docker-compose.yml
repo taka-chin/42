@@ -1,0 +1,11 @@
+services:
+  nginx:
+    build: ./requirements/nginx
+    ports:
+      - "8000:8000"
+
+  mariadb: 
+    build: ./requirements/mariadb
+
+  wordpress: 
+    build: ./requirements/wordpress
