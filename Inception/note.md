@@ -51,14 +51,24 @@ DockerデーモンはDocker APIリクエストを受けつけ、イメージ、�
 infrastructure via the port 443 only, using the TLSv1.2 or TLSv1.3
 protocol.
 
+- apt-get install
+    - a
+
 ## WP & PHP
 * A Docker container that contains WordPress + php-fpm (it must be installed and configured) only without nginx.
 * A volume that contains your WordPress database.
 * A second volume that contains your WordPress website files.
 * In your WordPress database, there must be two users, one of them being the ad- ministrator. The administrator’s username can’t contain admin/Admin or admin- istrator/Administrator (e.g., admin, administrator, Administrator, admin-123, and so forth).
 
+- apt-get install
+    - a
+
 ## mariaDB
 * A Docker container that contains MariaDB only without nginx.
+
+- apt-get install
+    - a
+
 
 ## env
 The latest tag is prohibited.
@@ -72,9 +82,13 @@ infrastructure via the port 443 only, using the TLSv1.2 or TLSv1.3
 protocol.
 
 ## tips
-コンテナIDを取得したい時
+* コンテナIDを取得したい時
 ```
 docker ps -lq
 ```
 
+* 停止したコンテナのクリーンアップ
+```
+docker rm -v $(docker ps -aq -f status=exited)
+```
 
