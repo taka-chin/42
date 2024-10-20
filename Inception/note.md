@@ -14,6 +14,15 @@
 # Dockerファイル
 Dockerfileはテキストファイルであり、イメージを作り上げるのために実行するコマンドライン命令を書く
 
+## CMD
+コンテナの起動後に指定された命令を実行します
+ENTRYPOINTが定義されているならこの命令はENTRYPOINTの引数として解釈されます
+
+
+## ENTRYPOINT
+コンテナの起動時に実行される実行可能ファイルを設定します
+任意のCMD命令や、イメージの後に続くdocker runの引数は指定した実行可能ファイルへのパラメータとして渡されます
+
 ## docker build
 
 Docker buildコマンドはDockerfileとコンテキストからイメージをbuildします
